@@ -5,6 +5,10 @@
 이 확장 프로그램을 설치하면 전자 금융 사기 예방 서비스가 가능하기 때문에 **무조건 설치**해야 합니다. 설치하지 않는 방법은 없습니다.  
 농업을 좋아하는 사람들의 은행, 한 명만 쓰는 은행에서 정상 작동을 확인하였습니다.
 
+# 설치
+
+Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk
+Firefox: 검토 중
 
 # 작동 영상(필수 시청)
 
