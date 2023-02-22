@@ -11,9 +11,9 @@
   "permissions": [
     "webRequest",
     "<all_urls>",
-    "https://lx.astxsvc.com",
-    "https://127.0.0.1",
-    "https://usher.ttvnw.net/api/channel/hls",
+    "https://lx.astxsvc.com:55920/*",
+    "https://127.0.0.1:55920/*",
+    "https://127.0.0.1:21300/*",
     "webRequestBlocking"
   ],
   "web_accessible_resources": ["script.js"],
