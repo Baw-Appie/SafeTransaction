@@ -7,8 +7,8 @@
 
 # 설치
 
-Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk
-Firefox: 검토 중
+Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk  
+Firefox: https://addons.mozilla.org/addon/safe-transaction
 
 # 작동 영상(필수 시청)
 
