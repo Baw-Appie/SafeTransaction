@@ -77,5 +77,5 @@ Firefox에서 DoH를 활성화 한 뒤, about:config 로 이동하여 ```network
 
 저는 착한 개발자이니 Safe Transaction을 사용함으로써 발생하는 모든 문제는 여러분에게 무상으로 제공하겠습니다. 사양하지 않으셔도 됩니다.  
 
-<sub>[1] 대한민국 <a href="https://twitter.com/actualpolicy_kr/status/1095918718436048898">(유사) 유권해석 기준</a>으로 처음부터 단대단 암호화가 아닌 제3자가 디코딩 후 열람 할 수 있는 사항을 보는 것은 "감청"에 해당되지 않으므로, 키로거는 "감청" 이 아닙니다.</sub>
+<sub>[1] 대한민국 <a href="https://twitter.com/actualpolicy_kr/status/1095918718436048898">(유사) 유권해석 기준</a>으로 처음부터 단대단 암호화가 아닌 제3자가 디코딩 후 열람 할 수 있는 사항을 보는 것은 "감청"에 해당되지 않으므로, 키로거는 "감청" 이 아닙니다.</sub><br>
 <sub>[2] 경쟁사 개발사인 모 연구소에서는 이런 프로그램을 PUP (Potentially Unwanted Program) 이라고 부르는 것 같아요.</sub>
