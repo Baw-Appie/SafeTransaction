@@ -5,6 +5,10 @@
 이 확장 프로그램을 설치하면 전자 금융 사기 예방 서비스가 가능하기 때문에 **무조건 설치**해야 합니다. 설치하지 않는 방법은 없습니다.  
 농업을 좋아하는 사람들의 은행, 한 명만 쓰는 은행에서 정상 작동을 확인하였습니다.
 
+> **경쟁 연구소로 부터 인정 받은 보안 기술**
+> 
+> ![Approved by competitor](https://user-images.githubusercontent.com/27724108/221333588-dcbc68ab-b003-45e4-a049-d459187b8bc2.png)
+
 # 설치
 
 Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk  
@@ -53,23 +57,25 @@ https://www.youtube.com/watch?v=QUXKib-jfEM
 저는 어떤 프로그램을 사용하는지는 사용하는 사람의 선택이니 어떤 것을 선택하도록 강요하지 않습니다. 그러므로 아래 몇 가지 해결 방법이 있습니다.  
 
 ### 해결 방법 1: Safe Transaction 삭제
-키로깅 기능부터, 사용중인 PC 정보 수집, 사용자 핑거프린팅, 접속 사이트 감청 등 세계 최고 기능이 한 번에 포함된 프로그램을 Safe Transaction를 대신하여 사용하는 방법입니다.  
+키로깅 기능부터, 사용중인 PC 정보 수집, 사용자 핑거프린팅, 접속 사이트 감청<sup>[1: 대한민국 해석 기준으로는 아님]</sup> 등 세계 최고 기능이 한 번에 포함된 프로그램을 Safe Transaction를 대신하여 사용하는 방법입니다.  
+수집을 동의하지 않으신거 같다고요? 걱정마세요. 경쟁사 개인정보 수집방침 깊숙한 곳에 숨겨져 있고, 따로 동의하라는 팝업을 띄우지도 않았거든요.<sup>[2]</sup>  
+
 이 글을 보는 사람이 이 방법을 사용하실 분은 없을 것이라고 생각합니다만, 아무튼 Safe Transaction을 지우면 문제가 해결됩니다.  
 (Safe Transaction은 경쟁 제품과 달리 삭제시 클릭 한번으로 제거됩니다)
 
 ### 해결 방법 2: 경쟁 제품 삭제
 누군지도 모르는 개발자가 적어둔 개인정보 수집하지 않는다는 글을 믿으시는 분에게 추천하는 방법입니다.  
-경쟁 제품을 삭제하면 해결됩니다. ([구라 제거기](https://teus.me/862?category=836336)를 활용하면 좋습니다)
+경쟁 제품을 삭제하면 해결됩니다. ([구라 제거기](https://teus.me/862?category=836336)를 활용하면 좋습니다)  
 
 ### 해결 방법 3: ECH 사용
-경쟁 제품은 http에서는 Host 헤더를, https에서는 SNI 필드를 체크하여 유해 사이트 여부를 확인합니다.
+경쟁 제품은 http에서는 Host 헤더를, https에서는 [SNI 필드를 체크하여 유해 사이트 여부](https://brunch.co.kr/@searphiel9/46)를 확인합니다.   
 https에서 이러한 감청을 막기 위한 여러가지의 시도들이 있었고 그 중 한 가지 방법으로 ECH(Encrypted Client Hello, [관련 링크](https://blog.cloudflare.com/encrypted-client-hello/))를 사용하는 방법입니다.  
 Firefox에서 DoH를 활성화 한 뒤, about:config 로 이동하여 ```network.dns.echconfig.enabled```를 ```true```로 변경하면 됩니다.  
 대신 이 방법은 기본적으로 비활성화되어 있는 기능인 만큼 실험적이고 항상 잘 작동하진 않습니다.  
-
 
 # 님만 모르는 문제
 
 저는 착한 개발자이니 Safe Transaction을 사용함으로써 발생하는 모든 문제는 여러분에게 무상으로 제공하겠습니다. 사양하지 않으셔도 됩니다.  
 
-<sub>[1] 대한민국 <a href="https://twitter.com/actualpolicy_kr/status/1095918718436048898">(유사) 유권해석 기준</a>으로 처음부터 단대단 암호화가 아닌 제3자가 디코딩 후 열람 할 수 있는 사항을 보는 것은 "감청"에 해당되지 않으므로, 키로거는 "감청" 이 아닙니다.</sub>
+<sub>[1] 대한민국 <a href="https://twitter.com/actualpolicy_kr/status/1095918718436048898">(유사) 유권해석 기준</a>으로 처음부터 단대단 암호화가 아닌 제3자가 디코딩 후 열람 할 수 있는 사항을 보는 것은 "감청"에 해당되지 않으므로, 키로거는 "감청" 이 아닙니다.</sub><br>
+<sub>[2] 경쟁사 개발사인 모 연구소에서는 이런 프로그램을 PUP (Potentially Unwanted Program) 이라고 부르는 것 같아요.</sub>
