@@ -58,7 +58,6 @@ chrome.runtime.onInstalled.addListener(() => {
           type: 'modifyHeaders',
           requestHeaders: [
             { header: "Host", operation: "set", value: "ipinside-emulator.gcore.appie.dev" },
-            { header: ":authority", operation: "set", value: "ipinside-emulator.gcore.appie.dev" }
           ]
         },
         condition: {
