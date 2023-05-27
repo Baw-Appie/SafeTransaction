@@ -30,7 +30,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
       return header;
     });
     
-    return { rquestHeaders }
+    return { requestHeaders }
   },
   {
     urls: ["<all_urls>"]
