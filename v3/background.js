@@ -47,7 +47,8 @@ chrome.runtime.onInstalled.addListener(() => {
           ]
         },
         condition: {
-          regexFilter: "https://gcore.com/(.*)&astx2-emulator"
+          regexFilter: "https://gcore.com/(.*)&astx2-emulator",
+          resourceTypes: ["script", "xmlhttprequest"]
         }
       },
       {
@@ -56,11 +57,13 @@ chrome.runtime.onInstalled.addListener(() => {
         action: {
           type: 'modifyHeaders',
           requestHeaders: [
-            { header: "Host", operation: "set", value: "ipinside-emulator.gcore.appie.dev" }
+            { header: "Host", operation: "set", value: "ipinside-emulator.gcore.appie.dev" },
+            { header: "Test", operation: "set", value: "test" }
           ]
         },
         condition: {
-          regexFilter: "https://gcore.com/(.*)&ipinside-emulator"
+          regexFilter: "https://gcore.com/(.*)&ipinside-emulator",
+          resourceTypes: ["script", "xmlhttprequest"]
         }
       }
     ],
