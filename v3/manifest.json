@@ -9,7 +9,8 @@
     "128": "128.png"
   },
   "permissions": [
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
     "<all_urls>"
