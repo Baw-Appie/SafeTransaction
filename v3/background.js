@@ -6,7 +6,7 @@ chrome.runtime.onInstalled.addListener(() => {
         priority: 1,
         action: {
           type: 'redirect',
-          redirect: { regexSubstitution: 'https://gcore.com/\\1' }
+          redirect: { regexSubstitution: 'https://gcore.com/\\1&astx2-emulator' }
         },
         condition: {
           regexFilter: 'https://127.0.0.1:55920/(.*)',
@@ -18,7 +18,7 @@ chrome.runtime.onInstalled.addListener(() => {
         priority: 2,
         action: {
           type: 'redirect',
-          redirect: { regexSubstitution: 'https://gcore.com/\\1#astx2-emulator' }
+          redirect: { regexSubstitution: 'https://gcore.com/\\1&astx2-emulator' }
         },
         condition: {
           regexFilter: 'https://lx.astxsvc.com:55920/(.*)',
@@ -30,7 +30,7 @@ chrome.runtime.onInstalled.addListener(() => {
         priority: 3,
         action: {
           type: 'redirect',
-          redirect: { regexSubstitution: 'https://gcore.com/\\1#ipinside-emulator' }
+          redirect: { regexSubstitution: 'https://gcore.com/\\1&ipinside-emulator' }
         },
         condition: {
           regexFilter: 'https://127.0.0.1:21300/(.*)',
@@ -47,7 +47,7 @@ chrome.runtime.onInstalled.addListener(() => {
           ]
         },
         condition: {
-          regexFilter: "https://gcore.com/(.*)#astx2-emulator"
+          regexFilter: "https://gcore.com/(.*)&astx2-emulator"
         }
       },
       {
@@ -60,7 +60,7 @@ chrome.runtime.onInstalled.addListener(() => {
           ]
         },
         condition: {
-          regexFilter: "https://gcore.com/(.*)#ipinside-emulator"
+          regexFilter: "https://gcore.com/(.*)&ipinside-emulator"
         }
       }
     ],
