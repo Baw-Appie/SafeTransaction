@@ -9,6 +9,17 @@
 > 
 > ![Approved by competitor](https://user-images.githubusercontent.com/27724108/221333588-dcbc68ab-b003-45e4-a049-d459187b8bc2.png)
 
+# 사용 전 확인하세요.
+이 확장 프로그램이 사용하는 서버는 KT, SK, LG U+ 등 국내 ISP에서 제공하는 DNS 서버에서 알 수 없는 이유로 차단되었습니다.  
+![DNS 차단](https://github.com/Baw-Appie/SafeTransaction/assets/15670271/fce775d6-575d-4cb0-8df0-9f7fa1160f75)  
+모 연구소가 이 확장 프로그램을 보고 화가 많이 난 것 같습니다.  
+안타깝게도 저는 국내 DNS 블랙홀을 우회할 만한 아이디어는 있지만, 실천에 필요한 돈은 없기에 사용자 분들에게 DNS 변경을 권장드립니다.
+
+위의 사유로 인하여 이 확장 프로그램을 사용하고자 한다면 네트워크의 DNS를 [Cloudflare DNS Resolver (1.1.1.1)](https://1.1.1.1) 또는 [Google Public DNS (8.8.8.8)](https://dns.google/) 등의 해외 서비스가 제공하는 DNS 서버로 변경하세요.  
+차단된 주소는 다음과 같습니다:
+ - astx2-emulator.appie.dev
+ - ipinside-emulator.appie.dev
+
 # 설치
 
 Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk  
