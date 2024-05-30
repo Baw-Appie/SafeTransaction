@@ -25,10 +25,23 @@
 Chrome: https://chrome.google.com/webstore/detail/safe-transaction/hlknngdmefboagppfcddkbnnphbhdngk  
 Firefox: https://addons.mozilla.org/addon/safe-transaction
 
-# 작동 영상(필수 시청)
+# 지원 현황
+금융인증서 (클라우드인증서)으로 로그인 한 뒤 확인한 결과입니다.  
+공동인증서, 자체인증서 등 타 방법으로 로그인 시 결과는 다를 수 있습니다.
 
-https://www.youtube.com/watch?v=QUXKib-jfEM
-
+|         | 조회 | 거래(이체) | 비고                                                   |
+| ------- | -- | ------ | ---------------------------------------------------- |
+| 국민은행    | ✔️ | ✔️     |                                                      |
+| 하나은행    | ✔️ | ✔️     |                                                      |
+| 신한은행    | ✔️ | ✔️     |                                                      |
+| 우리은행    | ❌  | ❌      | Veraport, AnySign4PC, nProtect Online Security 설치 필요 |
+| 농협은행    | ✔️ | ✔️     |                                                      |
+| 기업은행    | ❌  | ❌      | nProtect Online Security 설치 필요                       |
+| SC제일은행  | ✔️ | ❌      | INISAFE 설치시 이체 가능                                    |
+| 케이뱅크 기업 | ❌  | ❌      | CrossWebEX 설치 필요                                     |
+| OK저축은행  | ❌  | ❌      | AnySign4PC, nProtect Online Security 설치 필요           |
+| 삼성증권[^삼성증권]    | ✔️ | ❌      | SignKorea NA Certification Tool Kit 설치 필요            |
+[^삼성증권]: 클라우드 인증서 사용시 SignKorea NA Certification Tool Kit 설치가 되었음을 나타내는 Tampermonkey 스크립트로 로그인 가능함을 확인하였으나, 거래시 ASTx2의 E2E가 필요하여 거래 불가
 
 # 기능 및 특징
 
