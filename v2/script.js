@@ -1,4 +1,4 @@
-if(window.jQuery) jQuery(document).ready(() => {
+const patchUserAgent = () => {
     if(!window.$ASTX2) return
     const fakePlatformGetter = () => "MacIntel"
     if (Object.defineProperty) {
@@ -24,4 +24,11 @@ if(window.jQuery) jQuery(document).ready(() => {
       navigator.__defineGetter__("appVersion", fakeAppVersionGetter);
       Navigator.prototype.__defineGetter__("appVersion", fakeAppVersionGetter);
     }
-})
+}
+
+
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(patchUserAgent, 1);
+} else {
+  document.addEventListener("DOMContentLoaded", patchUserAgent);
+}
