@@ -31,27 +31,31 @@ Firefox: https://addons.mozilla.org/addon/safe-transaction
 
 |         | 조회 | 거래(이체) | 비고                                                   |
 | ------- | -- | ------ | ---------------------------------------------------- |
-| 국민은행    | ✔️ | ✔️     |                                                      |
-| 하나은행    | ✔️ | ✔️     |                                                      |
-| 신한은행    | ✔️ | ✔️     |                                                      |
-| 우리은행    | ❌  | ❌      | Veraport, AnySign4PC, nProtect Online Security 설치 필요 |
-| 농협은행    | ✔️ | ✔️     |                                                      |
-| 기업은행    | ❌  | ❌      | nProtect Online Security 설치 필요                       |
-| SC제일은행  | ✔️ | ❌      | INISAFE 설치시 이체 가능                                    |
-| 케이뱅크 기업 | ❌  | ❌      | CrossWebEX 설치 필요                                     |
-| OK저축은행  | ❌  | ❌      | AnySign4PC, nProtect Online Security 설치 필요           |
-| 삼성증권[^삼성증권]    | ✔️ | ❌      | SignKorea NA Certification Tool Kit 설치 필요            |
+| 국민은행    | ✔️ | ✔️ | |
+| 하나은행    | ✔️ | ✔️ | |
+| 신한은행    | ✔️ | ✔️ | |
+| 우리은행    | ❓  | ❓    | 확인 필요 |
+| 농협은행    | ✔️ | ✔️ | |
+| 기업은행    | ✔️  | ✔️  | 24.09.26 확인 |
+| SC제일은행  | ✔️ | ❌ | INISAFE CrossWeb EX 설치시 이체 가능 |
+| 케이뱅크 기업 | ❌  | ❌ | INISAFE CrossWeb EX 설치 필요  |
+| OK저축은행  | ✔️ | ❌ | 이체 시도시 NOS 통신 오류 (NOS E2E 필요) / 24.09.26 확인 |
+| 삼성증권[^삼성증권]    | ✔️ | ❌ | SignKorea NA Certification Tool Kit 설치 필요 |
 [^삼성증권]: 클라우드 인증서 사용시 SignKorea NA Certification Tool Kit 설치가 되었음을 나타내는 Tampermonkey 스크립트로 로그인 가능함을 확인하였으나, 거래시 ASTx2의 E2E가 필요하여 거래 불가
 
 # 기능 및 특징
 
  - 안전한 거래를 지원하지만, 아무 것도 하지 않습니다.
  - IP 안에서는 무슨 일이 일어날까요? 아무 일도 일어나지 않습니다.
+ - 온라인 보안을 해드립니다
 
 
 # 만드는 것을 도와주신 감사한 분
 
  - [@BawAppie](https://twitter.com/BawAppie)
+
+## Github Sponsor
+이 프로젝트는 [한국모바일상품권](https://korgiftcard.io)으로부터 금전적인 지원을 받았습니다.
 
 
 # 외부 서버 이용 안내

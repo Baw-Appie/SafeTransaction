@@ -35,10 +35,22 @@ chrome.runtime.onInstalled.addListener(() => {
         condition: {
           regexFilter: 'https://127.0.0.1:21300/(.*)',
           resourceTypes: ["script", "xmlhttprequest"]
+        },
+      },
+      {
+        id: 4,
+        priority: 4,
+        action: {
+          type: 'redirect',
+          redirect: { regexSubstitution: 'https://nos-emulator.appie.dev/\\1' }
+        },
+        condition: {
+          regexFilter: 'https://127.0.0.1:14440/(.*)',
+          resourceTypes: ["script", "xmlhttprequest", "image"]
         }
       },
     ],
-    removeRuleIds: [1,2,3]
+    removeRuleIds: [1,2,3,4]
   })
 })
 
