@@ -66,7 +66,7 @@ const _SafeTransactionUserAgentPatcher = () => {
   }
 }
 
-_SafeTransactionNOSVKeypadPatchInitializer()
+// _SafeTransactionNOSVKeypadPatchInitializer()
 const _SafeTransactionOnWindowLoaded = () => {
   _SafeTransactionUserAgentPatcher()
 }
