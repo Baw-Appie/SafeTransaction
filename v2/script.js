@@ -13,9 +13,10 @@ const _SafeTransactionNOSVKeypadPatchInitializer = () => {
         const response = await makeKI.text()
         const splitResponse = response.split("|")
         encryptedInput.value = splitResponse[0]
-        newTarget.readonly = false
+        newTarget.removeAttribute("readonly")
         newTarget.setAttribute("x-safetransaction-kh", splitResponse[1])
         newTarget.addEventListener("blur", onblurCallback)
+        console.log("[SafeTransaction] NOS Virtual Keypad Replaced", newTarget)
       }
     }
   }
@@ -29,43 +30,45 @@ const _SafeTransactionNOSVKeypadPatchInitializer = () => {
     khInput.value = target.value
   }
 
-  const npkencryptInputs = document.querySelectorAll('input[npkencrypt]');
-  if(npkencryptInputs.length == 0) {
-    const fakeNuaGetter = () => "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36"
-    Object.defineProperty(window, "nua", { get: fakeNuaGetter });
-  }
+  // const npkencryptInputs = document.querySelectorAll('input[npkencrypt]');
+  // if(npkencryptInputs.length == 0) {
+  //   const fakeNuaGetter = () => "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36"
+  //   Object.defineProperty(window, "nua", { get: fakeNuaGetter });
+  // }
 }
 
 const _SafeTransactionUserAgentPatcher = () => {
   let needToPatch = false
-  if(window.$ASTX2) needToPatch = true
-  const fakePlatformGetter = () => "MacIntel"
-  if (Object.defineProperty) {
-    Object.defineProperty(navigator, "platform", { get: fakePlatformGetter });
-    Object.defineProperty(Navigator.prototype, "platform", { get: fakePlatformGetter });
-  } else if (Object.prototype.__defineGetter__) {
-    navigator.__defineGetter__("platform", fakePlatformGetter);
-    Navigator.prototype.__defineGetter__("platform", fakePlatformGetter);
-  }
-  const fakeUserAgentGetter = () => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-  if (Object.defineProperty) {
-    Object.defineProperty(navigator, "userAgent", { get: fakeUserAgentGetter });
-    Object.defineProperty(Navigator.prototype, "userAgent", { get: fakeUserAgentGetter });
-  } else if (Object.prototype.__defineGetter__) {
-    navigator.__defineGetter__("userAgent", fakeUserAgentGetter);
-    Navigator.prototype.__defineGetter__("userAgent", fakeUserAgentGetter);
-  }
-  const fakeAppVersionGetter = () => "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-  if (Object.defineProperty) {
-    Object.defineProperty(navigator, "appVersion", { get: fakeAppVersionGetter });
-    Object.defineProperty(Navigator.prototype, "appVersion", { get: fakeAppVersionGetter });
-  } else if (Object.prototype.__defineGetter__) {
-    navigator.__defineGetter__("appVersion", fakeAppVersionGetter);
-    Navigator.prototype.__defineGetter__("appVersion", fakeAppVersionGetter);
+  if (window.$ASTX2) needToPatch = true
+  if (needToPatch) {
+    const fakePlatformGetter = () => "MacIntel"
+    if (Object.defineProperty) {
+      Object.defineProperty(navigator, "platform", { get: fakePlatformGetter });
+      Object.defineProperty(Navigator.prototype, "platform", { get: fakePlatformGetter });
+    } else if (Object.prototype.__defineGetter__) {
+      navigator.__defineGetter__("platform", fakePlatformGetter);
+      Navigator.prototype.__defineGetter__("platform", fakePlatformGetter);
+    }
+    const fakeUserAgentGetter = () => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    if (Object.defineProperty) {
+      Object.defineProperty(navigator, "userAgent", { get: fakeUserAgentGetter });
+      Object.defineProperty(Navigator.prototype, "userAgent", { get: fakeUserAgentGetter });
+    } else if (Object.prototype.__defineGetter__) {
+      navigator.__defineGetter__("userAgent", fakeUserAgentGetter);
+      Navigator.prototype.__defineGetter__("userAgent", fakeUserAgentGetter);
+    }
+    const fakeAppVersionGetter = () => "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    if (Object.defineProperty) {
+      Object.defineProperty(navigator, "appVersion", { get: fakeAppVersionGetter });
+      Object.defineProperty(Navigator.prototype, "appVersion", { get: fakeAppVersionGetter });
+    } else if (Object.prototype.__defineGetter__) {
+      navigator.__defineGetter__("appVersion", fakeAppVersionGetter);
+      Navigator.prototype.__defineGetter__("appVersion", fakeAppVersionGetter);
+    }
   }
 }
 
-_SafeTransactionNOSVKeypadPatchInitializer()
+// _SafeTransactionNOSVKeypadPatchInitializer()
 const _SafeTransactionOnWindowLoaded = () => {
   _SafeTransactionUserAgentPatcher()
 }
