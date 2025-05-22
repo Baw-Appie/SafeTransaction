@@ -68,9 +68,41 @@ const _SafeTransactionUserAgentPatcher = () => {
   }
 }
 
+const _SafeTransactionKBankBizPatcher = () => {
+  if (location.host != "biz.kbanknow.com") return
+  Object.defineProperty(window, "SECURE_TYPE", { value: "", writable: false });
+
+  const originalOpen = XMLHttpRequest.prototype.open;
+  const originalSend = XMLHttpRequest.prototype.send;
+
+  XMLHttpRequest.prototype.open = function (method, url) {
+    this._target = (typeof url === 'string' && url.startsWith("/product/initech/crossweb/webui/conf/customerConf.json"));
+    this._url = url;
+    return originalOpen.apply(this, arguments);
+  };
+
+  XMLHttpRequest.prototype.send = function () {
+    if (this._target) {
+      this.addEventListener('readystatechange', function (e) {
+        if (this.readyState === 4) {
+          const newText = this.responseText.replaceAll(`"USE":"Y"`, `"USE":"N"`)
+          Object.defineProperty(this, 'responseText', {
+            get: function () { return newText; }
+          });
+          Object.defineProperty(this, 'response', {
+            get: function () { return newText; }
+          });
+        }
+      });
+    }
+    return originalSend.apply(this, arguments);
+  };
+}
+
 // _SafeTransactionNOSVKeypadPatchInitializer()
 const _SafeTransactionOnWindowLoaded = () => {
   _SafeTransactionUserAgentPatcher()
+   _SafeTransactionKBankBizPatcher()
 }
 
 

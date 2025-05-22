@@ -38,7 +38,7 @@ Firefox: https://addons.mozilla.org/addon/safe-transaction
 | 농협은행    | ✔️ | ✔️ | |
 | 기업은행    | ✔️  | ✔️  | 24.09.26 확인 |
 | SC제일은행  | ✔️ | ❌ | INISAFE CrossWeb EX 설치시 이체 가능 |
-| 케이뱅크 기업 | ❌  | ❌ | INISAFE CrossWeb EX 설치 필요  |
+| 케이뱅크 기업 | ✔️  | ✔️ | 25.05.22 케뱅비즈 전용 패치로 우회  |
 | OK저축은행  | ✔️ | ❌ | 이체 시도시 NOS 통신 오류 (NOS E2E 필요) / 24.09.26 확인 |
 | 삼성증권[^삼성증권]    | ✔️ | ❌ | SignKorea NA Certification Tool Kit 설치 필요 |
 [^삼성증권]: 클라우드 인증서 사용시 SignKorea NA Certification Tool Kit 설치가 되었음을 나타내는 Tampermonkey 스크립트로 로그인 가능함을 확인하였으나, 거래시 ASTx2의 E2E가 필요하여 거래 불가
