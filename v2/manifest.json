@@ -20,7 +20,7 @@
   "web_accessible_resources": ["script.js"],
   "content_scripts": [
     {
-      "run_at": "document_idle",
+      "run_at": "document_start",
       "matches": ["<all_urls>"],
       "js": ["loader.js"]
     }

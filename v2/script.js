@@ -100,9 +100,9 @@ const _SafeTransactionKBankBizPatcher = () => {
 }
 
 // _SafeTransactionNOSVKeypadPatchInitializer()
+_SafeTransactionKBankBizPatcher()
 const _SafeTransactionOnWindowLoaded = () => {
   _SafeTransactionUserAgentPatcher()
-  _SafeTransactionKBankBizPatcher()
 }
 
 

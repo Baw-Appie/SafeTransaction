@@ -39,8 +39,8 @@ const _SafeTransactionNOSVKeypadPatchInitializer = () => {
 
 const _SafeTransactionUserAgentPatcher = () => {
   let needToPatch = false
-  if(window.$ASTX2) needToPatch = true
-  if(needToPatch) {
+  if (window.$ASTX2) needToPatch = true
+  if (needToPatch) {
     const fakePlatformGetter = () => "MacIntel"
     if (Object.defineProperty) {
       Object.defineProperty(navigator, "platform", { get: fakePlatformGetter });
@@ -100,9 +100,9 @@ const _SafeTransactionKBankBizPatcher = () => {
 }
 
 // _SafeTransactionNOSVKeypadPatchInitializer()
+_SafeTransactionKBankBizPatcher()
 const _SafeTransactionOnWindowLoaded = () => {
   _SafeTransactionUserAgentPatcher()
-   _SafeTransactionKBankBizPatcher()
 }
 
 
