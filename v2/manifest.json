@@ -22,7 +22,8 @@
     {
       "run_at": "document_start",
       "matches": ["<all_urls>"],
-      "js": ["loader.js"]
+      "js": ["loader.js"],
+      "all_frames": true
     }
   ],
   "background": {
